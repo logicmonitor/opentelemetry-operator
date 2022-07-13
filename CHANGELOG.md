@@ -1,6 +1,97 @@
 Changes by Version
 ==================
 
+0.55.0
+-------------------
+### 🧰 Bug fixes 🧰
+* Fixing monitor configuration ([#966](https://github.com/open-telemetry/opentelemetry-operator/pull/966), [@yuriolisa](https://github.com/yuriolisa))
+* Fix Pod Mutation loop ([#953](https://github.com/open-telemetry/opentelemetry-operator/pull/953), [@mat-rumian](https://github.com/mat-rumian))
+* Fix the issue that the number of target-allocator replicas  ([#951](https://github.com/open-telemetry/opentelemetry-operator/pull/951), [@CoderPoet](https://github.com/CoderPoet))
+### 💡 Enhancements 💡
+* Update Python auto-instrumentation  0.32b0 ([#961](https://github.com/open-telemetry/opentelemetry-operator/pull/961), [@mat-rumian](https://github.com/mat-rumian))
+#### OpenTelemetry Collector and Contrib
+* [OpenTelemetry Collector - v0.55.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.55.0)
+* [OpenTelemetry Contrib - v0.55.0](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases/tag/v0.55.0)
+
+0.54.0
+-------------------
+### 🧰 Bug fixes 🧰
+* Fix parameter encoding issue ([#930](https://github.com/open-telemetry/opentelemetry-operator/pull/930), [@jaronoff97](https://github.com/jaronoff97))
+#### OpenTelemetry Collector and Contrib
+* [OpenTelemetry Collector - v0.54.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.54.0)
+* [OpenTelemetry Contrib - v0.54.0](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases/tag/v0.54.0)
+
+0.53.0
+-------------------
+### 💡 Enhancements 💡
+* Print TA pod logs in e2e smoke test ([#920](https://github.com/open-telemetry/opentelemetry-operator/pull/920), [@pavolloffay](https://github.com/pavolloffay))
+#### OpenTelemetry Collector and Contrib
+* [OpenTelemetry Collector - v0.53.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.53.0)
+* [OpenTelemetry Contrib - v0.53.0](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases/tag/v0.53.0)
+
+0.52.0
+-------------------
+### 🚀 New components 🚀
+* Add creation of ServiceAccount to the Target Allocator ([#836](https://github.com/open-telemetry/opentelemetry-operator/pull/836), [@jaronoff97](https://github.com/jaronoff97))
+* Cross namespace instrumentation ([#889](https://github.com/open-telemetry/opentelemetry-operator/pull/889), [@tKe](https://github.com/tKe))
+* Added extra cli flag webhook-port ([#899](https://github.com/open-telemetry/opentelemetry-operator/pull/899), [@abelperezok](https://github.com/abelperezok))
+### 💡 Enhancements 💡
+* Add cert manager 1.8.0 ([#905](https://github.com/open-telemetry/opentelemetry-operator/pull/905), [@yuriolisa](https://github.com/yuriolisa))
+* updated module name and imports ([#910](https://github.com/open-telemetry/opentelemetry-operator/pull/910), [@evanli02](https://github.com/evanli02))
+### 🧰 Bug fixes 🧰
+* Fix docker multiarch build for operator ([#882](https://github.com/open-telemetry/opentelemetry-operator/pull/882), [@pavolloffay](https://github.com/pavolloffay))
+* avoid non static labels in workload objects selector ([#849](https://github.com/open-telemetry/opentelemetry-operator/pull/849), [@DWonMtl](https://github.com/DWonMtl))
+#### OpenTelemetry Collector and Contrib
+* [OpenTelemetry Collector - v0.52.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.52.0)
+* [OpenTelemetry Contrib - v0.52.0](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases/tag/v0.52.0)
+
+0.51.0
+-------------------
+### 🚀 New components 🚀
+* Choose target container injection with annotation ([#689](https://github.com/open-telemetry/opentelemetry-operator/pull/689), [@fscellos](https://github.com/fscellos))
+* Fix K8s attributes values in OTEL_RESOURCE_ATTRIBUTES env var ([#864](https://github.com/open-telemetry/opentelemetry-operator/pull/864), [@mat-rumian](https://github.com/mat-rumian))
+### 💡 Enhancements 💡
+* Update Python auto-instrumentation versions.txt ([#867](https://github.com/open-telemetry/opentelemetry-operator/pull/867), [@mat-rumian](https://github.com/mat-rumian))
+* Update Python instrumentation to 0.30b1 ([#860](https://github.com/open-telemetry/opentelemetry-operator/pull/860), [@mat-rumian](https://github.com/mat-rumian))
+* Fix changelog formatting ([#863](https://github.com/open-telemetry/opentelemetry-operator/pull/863), [@pavolloffay](https://github.com/pavolloffay))
+### 🧰 Bug fixes 🧰
+#### OpenTelemetry Collector and Contrib
+* [OpenTelemetry Collector - v0.51.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.51.0)
+* [OpenTelemetry Contrib - v0.51.0](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases/tag/v0.51.0)
+
+0.50.0
+-------------------
+### 🚀 New components 🚀
+* Add resource attributes to collector sidecar ([#832](https://github.com/open-telemetry/opentelemetry-operator/pull/832), [@rubenvp8510](https://github.com/rubenvp8510))
+* Create serving certs for headless services on OpenShift (#818) ([#824](https://github.com/open-telemetry/opentelemetry-operator/pull/824), [@rkukura](https://github.com/rkukura))
+* [targetallocator] PrometheusOperator CRD MVC ([#653](https://github.com/open-telemetry/opentelemetry-operator/pull/653), [@secustor](https://github.com/secustor))
+### 💡 Enhancements 💡
+* Set replicas to MaxReplicas if HPA is enabled ([#833](https://github.com/open-telemetry/opentelemetry-operator/pull/833), [@binjip978](https://github.com/binjip978))
+* Update sidecar example in README ([#837](https://github.com/open-telemetry/opentelemetry-operator/pull/837), [@erichsueh3](https://github.com/erichsueh3))
+### 🧰 Bug fixes 🧰
+* Fix Default Image Annotations ([#842](https://github.com/open-telemetry/opentelemetry-operator/pull/842), [@goatsthatcode](https://github.com/goatsthatcode))
+* Do not block pod creating on internal error in webhook ([#811](https://github.com/open-telemetry/opentelemetry-operator/pull/811), [@pavolloffay](https://github.com/pavolloffay))
+#### OpenTelemetry Collector and Contrib
+* [OpenTelemetry Collector - v0.50.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.50.0)
+* [OpenTelemetry Contrib - v0.50.0](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases/tag/v0.50.0)
+
+0.49.0
+-------------------
+### 🚀 New components 🚀
+* Including new label ([#797](https://github.com/open-telemetry/opentelemetry-operator/pull/797), [@yuriolisa](https://github.com/yuriolisa))
+* Add scale subresource status to the OpenTelemetryCollector CRD status ([#785](https://github.com/open-telemetry/opentelemetry-operator/pull/785), [@secat](https://github.com/secat))
+### 💡 Enhancements 💡
+* Set replicas to default value ([#814](https://github.com/open-telemetry/opentelemetry-operator/pull/814), [@pavolloffay](https://github.com/pavolloffay))
+* Use golang 1.18 ([#786](https://github.com/open-telemetry/opentelemetry-operator/pull/786), [@pavolloffay](https://github.com/pavolloffay))
+* Support nodeSelector field for non-sidecar collectors ([#789](https://github.com/open-telemetry/opentelemetry-operator/pull/789), [@jutley](https://github.com/jutley))
+* Fix Missing parameter on labels function ([#809](https://github.com/open-telemetry/opentelemetry-operator/pull/809), [@yuriolisa](https://github.com/yuriolisa))
+### 🧰 Bug fixes 🧰
+* Check exposed svc ports ([#778](https://github.com/open-telemetry/opentelemetry-operator/pull/778), [@yuriolisa](https://github.com/yuriolisa))
+* Fix panic when spec.replicas is nil ([#798](https://github.com/open-telemetry/opentelemetry-operator/pull/798), [@wei840222](https://github.com/wei840222))
+#### OpenTelemetry Collector and Contrib
+* [OpenTelemetry Collector - v0.49.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.49.0)
+* [OpenTelemetry Contrib - v0.49.0](https://github.com/open-telemetry/opentelemetry-collector-contrib/releases/tag/v0.49.0)
+
 0.48.0
 -------------------
 * Bumped OpenTelemetry Collector to v0.48.0

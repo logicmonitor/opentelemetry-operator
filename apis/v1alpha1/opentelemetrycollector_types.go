@@ -129,9 +129,24 @@ type OpenTelemetryTargetAllocator struct {
 	// +optional
 	Enabled bool `json:"enabled,omitempty"`
 
+	// PrometheusCR defines the configuration for the retrieval of PrometheusOperator CRDs ( servicemonitor.monitoring.coreos.com/v1 and podmonitor.monitoring.coreos.com/v1 )  retrieval.
+	// All CR instances which the ServiceAccount has access to will be retrieved. This includes other namespaces.
+	// +optional
+	PrometheusCR OpenTelemetryTargetAllocatorPrometheusCR `json:"prometheusCR,omitempty"`
+
+	// ServiceAccount indicates the name of an existing service account to use with this instance.
+	// +optional
+	ServiceAccount string `json:"serviceAccount,omitempty"`
+
 	// Image indicates the container image to use for the OpenTelemetry TargetAllocator.
 	// +optional
 	Image string `json:"image,omitempty"`
+}
+
+type OpenTelemetryTargetAllocatorPrometheusCR struct {
+	// Enabled indicates whether to use a PrometheusOperator custom resources as targets or not.
+	// +optional
+	Enabled bool `json:"enabled,omitempty"`
 }
 
 // ScaleSubresourceStatus defines the observed state of the OpenTelemetryCollector's
